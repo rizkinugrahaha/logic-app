@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Test logic index html</p>
+    </div>
+
+    <script>
+        var arr = [100, 22, 25, 42, 21, 23];
+        var findMe = 28;
+
+        function tesFunc(arr = []) {
+            let newArr = []
+
+            if(arr.length > 0) {
+                arr.map((i) => {
+                    if(i % 2 === 0) {
+                        newArr.push(i*2)
+                    }
+
+                    if (i % 2 !== 0) {
+                        newArr.push(i*3)
+                    }
+                })
+
+                return console.log(newArr);
+            }
+
+            if(arr.length === 0) {
+                return console.log('array is empty');
+            }
+            
+        }
+
+        function findString(number) {
+            if(number % 3 === 0 && number % 7 === 0) {
+                return console.log('link aja')
+            }
+
+            if(number % 3 === 0) {
+                return console.log('link')
+            }
+
+            if(number % 7 === 0) {
+                return console.log('aja')
+            }
+        }
+
+        // function tesAnotherFunc(arr = []) {
+        //     let newArr = [];
+
+        //     if(arr.length > 0) {
+        //         arr.map((i) => {
+        //             if (i )
+        //         })
+        //     }
+        // }
+
+        tesFunc(arr);
+        
+        findString(findMe);
+       
+    </script>
+</body>
+</html>

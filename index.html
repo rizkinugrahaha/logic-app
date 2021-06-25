@@ -30,6 +30,18 @@
         </div>
         <div class="row">
             <div>
+                <label for="lastLogicInput" class="form-label">2nd logic question</label>
+                <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="secondLogicInput" placeholder="Input a number">
+                    <button class="btn btn-outline-secondary" type="button" id="secondButton">Button</button>
+                </div>
+            </div>
+            <div>
+                <p id="secondResult"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div>
                 <label for="lastLogicInput" class="form-label">4th logic question</label>
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" id="lastLogicInput"
@@ -42,70 +54,7 @@
             </div>
         </div>
     </div>
-
-    <script>
-        var arr = [100, 22, 25, 42, 21, 23];
-        var findMe = 28;
-
-        function tesFunc(arr = []) {
-            let newArr = []
-
-            if (arr.length > 0) {
-                arr.map((i) => {
-                    if (i % 2 === 0) {
-                        newArr.push(i * 2)
-                    }
-
-                    if (i % 2 !== 0) {
-                        newArr.push(i * 3)
-                    }
-                })
-
-                document.getElementById("firstResult").innerHTML = `[${newArr}]`;
-            }
-
-            if (arr.length === 0) {
-                document.getElementById("firstResult").innerHTML = "No array is defined";
-            }
-
-        }
-
-        document.getElementById('firstButton').onclick = function (e) {
-            e.preventDefault();
-            const joinString = document.getElementById('firstLogicInput').value.split(',').map(Number);
-
-            tesFunc(joinString);
-        }
-
-
-        function findString(arr = []) {
-            let newArr = [];
-
-            if (arr.length > 0) {
-                arr.map((i) => {
-                    if (i % 3 === 0 && i % 7 === 0) {
-                        newArr.push('link aja');
-                    } else if (i % 3 === 0) {
-                        newArr.push('link');
-                    } else if (i % 7 === 0) {
-                        newArr.push('aja');
-                    } else {
-                        newArr.push(i);
-                    }
-                })
-
-                document.getElementById("lastResult").innerHTML = `[${newArr}]`;
-            }
-
-        }
-
-        document.getElementById('lastButton').onclick = function (e) {
-            e.preventDefault();
-            const joinString = document.getElementById('lastLogicInput').value.split(',').map(Number);
-
-            findString(joinString);
-        }
-    </script>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 
 </html>
